@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page porfolio</title>
+    <link rel="stylesheet" href="potfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgb(49, 37, 37);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: orangered;
+    text-shadow: 0 0 25px orangered;
+    transform: scale(1.1);
+}
+span{
+    color: orangered;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+    padding: 10px;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: orangered;
+    border-bottom: 3px solid orange;
+}
+.contact{
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.contact:hover{
+    background-color: orangered;
+    color: white;
+    box-shadow: 0 0 25px orangered;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(234, 167, 167);
+    align-items: center;
+    display: flex;
+    gap: 7em;
+    padding: 30px 12px 0;
+}
+.home-content h3{
+    font-size: 42px;
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px ;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+.img-box img{
+    border-radius: 100%;
+    width: 260px;
+    height: 310px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(34, 3, 3);
+    width: 50px;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+
+}
+.about-img img{
+    position: relative;
+    width: 350px;
+    box-shadow: 0 0 25px orangered;
+    border-radius: 50%;
+   
+
+}
+
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 62px;
+    color: white;
+}
+.about-content p{
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+.contact-form h2{
+   text-align: center;
+   margin-bottom: 1em;
+   margin-top: 3em;
+   font-size: 36px;
+}
+.contact-form form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-form form .input-box input,
+.contact-form form textarea{
+    width: 100%;
+    padding: 1.5em;
+    font-size:18px;
+    color: black;
+    background: aliceblue;
+    border-radius: .8rem;
+    margin: 1rem o;
+ 
+    resize: none;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+ 
+   background-color: black;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+    padding: o;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid orangered;
+    text-align: center;
+
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+.list{
+    text-align: center;
+}
+.outa{
+    font-size: 25px;
+    color: brown;
+}
+
+   
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>fr</span>ank</a>
+        <nav class="navbar">
+            <a href="#" id="outa">PORTFOLIO</a>
+            <a href="https://mail.google.com/mail/u/1/#inbox">Service</a>
+            <a href="https://chatgpt.com/">Experience</a>
+            <a href="https://www.w3schools.com/css/css_colors.asp">Projects</a>
+            <a href="https://www.chuka.ac.ke/">Education</a>
+        </nav>
+        <a href="https://mail.google.com/mail/u/1/#inbox" class="contact">contact me</a>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I am <span>francis<br></span>a fronted Development</h1>
+            <p>Consider optimizing the rendering performance by using React's useMemo or useCallback to prevent unnecessary re-renders of components that depend on large data sets."
+
+                !</p>
+            <div class="gtn-box">
+                <button class="btn-1">Hire me</button>
+                <button class="btn-2">Experience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="WhatsApp Image 2024-11-21 at 19.52.09_c513ba49.jpg" alt="mzamali">
+        </div>
+    </section>
+   <section class="about">
+    <div class="about-img">
+        <img src="WhatsApp Image 2024-11-21 at 19.52.09_c513ba49.jpg" alt="mzamali">
+        <div class="about-content">
+            <h2 class="heading">About <span>me</span></h2>
+            <h3>utawala studio <span>Developer</span></h3>
+            <p>Write code as if the next person maintaining it is a beginner… and that person might be you in six months. Prioritize readability, use meaningful variable names, and add concise but clear comments where necessary. Future you (and your teammates) will thank you!</p>
+            <a href="#" class="btn-2">Experience</a>
+        </div>
+
+    </div>
+   </section>
+   <section class="contact-form">
+    <h2 class="contact-me">contact <span>me</span></h2>
+    <form action="#">
+        <div class="input-box">
+            <input type="text" placeholder="full name">
+            <input type="email" placeholder="email">
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="phone number">
+            <input type="text" placeholder="subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+        <input type="submit" value="Send message" class="btn-1">
+        
+    </form>
+   </section>
+   <footer class="footer">
+    <div class="social">
+        <a href="https://www.youtube.com/@FrancisOuta"><i class='bx bxl-youtube' ></i></a>
+        <a href="https://www.instagram.com/fmzamali/"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61550059564330"><i class='bx bxl-facebook-circle' ></i></a>
+        <a href="https://www.tiktok.com/@user2487801659480?lang=en"><i class='bx bxl-twitter' ></i></a>
+        
+    </div>
+    <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">privacy policy</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+        <p class="copyright">&copy;copyright 2025 > || MZAMALI||All right resereved</p>
+   </footer>
+    
+</body>
+</html>
